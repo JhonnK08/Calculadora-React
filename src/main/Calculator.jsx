@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import Button from "../components/Button";
 import Display from '../components/Display';
 import './Calculator.css';
@@ -49,9 +49,7 @@ export default function Calculator() {
             return
         }
         const clearedDisplay = displayValue === '0' || clearDisplay
-        console.log(clearedDisplay)
         const currentValue = clearedDisplay ? '': displayValue
-        console.log(currentValue)
         setDisplayValue( currentValue + n)
         console.log(currentValue + n)
         setClearDisplay(false)
